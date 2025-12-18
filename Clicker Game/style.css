@@ -43,6 +43,17 @@ margin-bottom: 30px;
     border: 4px solid white;
     padding: 10px 20px;
     border-radius: 5px;
+    position: relative;
+}
+
+.mid-section h4{
+margin: 0;
+margin-bottom: 20px;
+font-size: 20px;
+}
+
+.mid-section p {
+    margin: 0;
 }
 
 .upgrade-img {
@@ -55,4 +66,18 @@ margin-bottom: 30px;
 
 .upgrade-cost {
     display: flex;
+}
+
+.next-level-info {
+    position: absolute;
+    right: -105px;
+    background-color: rgb(90, 89, 90);
+    height: 80px;
+    width: 100px;
+    text-align: center;
+    display: none;
+}
+
+.upgrade:hover .next-level-info {
+    display: block;
 }
