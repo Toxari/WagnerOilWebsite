@@ -9,16 +9,16 @@ h1 {
     text-align: center;
 }
 
-.a {
+.link {
     color: white;
     
 }
 
-.a:hover {
+.link:hover {
     color: gray;
 }
 
-.a:active {
+.link:active {
     color: darkgray;
 }
 
