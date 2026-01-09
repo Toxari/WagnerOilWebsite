@@ -1,11 +1,11 @@
 let money = document.querySelector('.money-count')
 let parsedMoney = parseFloat(money.innerHTML)
 
-let oilFountainCost = document.querySelector('.oil-fountain-cost')
-let parsedOilFntnCost = parseFloat(oilFountainCost.innerHTML)
-let oilFntnLevel = document.querySelector(".oilFntn-level")
-let oilFntnIncrease = document.querySelector(".oilFntn-increase")
-let parsedOilFntnIncr = parseFloat(oilFntnIncrease.innerHTML)
+let bBCost = document.querySelector('.bB-cost')
+let parsedBBCost = parseFloat(bBCost.innerHTML)
+let bBLevel = document.querySelector(".bB-level")
+let bBIncrease = document.querySelector(".bB-increase")
+let parsedBBIncr = parseFloat(bBIncrease.innerHTML)
 
 let mpc = 1;
 
@@ -14,17 +14,17 @@ function incrementMoney() {
     money.innerHTML = Math.round(parsedMoney += mpc);
 }
 
-function buyOilFntn() {
-    if (parsedMoney >= parsedOilFntnCost) {
-        money.innerHTML = Math.round(parsedMoney -= parsedOilFntnCost);
+function buyBB() {
+    if (parsedMoney >= parsedBBCost) {
+        money.innerHTML = Math.round(parsedMoney -= parsedBBCost);
 
-        oilFntnLevel.innerHTML ++
+        bBLevel.innerHTML ++
 
-        parsedOilFntnIncr = parseFloat((parsedOilFntnIncr * 1.03).toFixed(2))
-        oilFntnIncrease.innerHTML =  parsedOilFntnIncr
-        mpc += parsedOilFntnIncr
+        parsedBBIncr = parseFloat((parsedBBIncr * 1.03).toFixed(2))
+        bBIncrease.innerHTML =  parsedBBIncr
+        mpc += parsedBBIncr
 
-        parsedOilFntnCost *= 1.18;
-        oilFountainCost.innerHTML = Math.round(parsedOilFntnCost)
+        parsedBBCost *= 1.18;
+        bBCost.innerHTML = Math.round(parsedBBCost)
     }
 }
