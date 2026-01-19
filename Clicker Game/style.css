@@ -62,6 +62,10 @@ font-size: 20px;
     width: 40px;
 }
 
+.bucket-container {
+    position: relative;
+}
+
 .oilbucket-img {
     width: 50px;
 }
@@ -103,4 +107,44 @@ font-size: 20px;
     font-weight: bold;
     font-size: 22px;
 
+}
+
+.dollarsign {
+    color: green;
+}
+
+.money-count {
+    color: white;
+    text-shadow: 2px 2px 3px rgb(90, 89, 90);
+}
+
+.fade-up {
+    animation: fade-up 1s;
+}
+
+@keyframes fade-up {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    20% {
+        transform: translateY(-5px); 
+        opacity: 0.8;       
+    }
+    40% {
+        transform: translateY(-10px); 
+        opacity: 0.6;       
+    }
+    60% {
+        transform: translateY(-15px); 
+        opacity: 0.4;       
+    }
+    80% {
+        transform: translateY(-20px); 
+        opacity: 0.2;       
+    }
+    100% {
+        transform: translateY(-25px);
+        opacity: 0;        
+    } 
 }

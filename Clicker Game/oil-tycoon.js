@@ -22,13 +22,33 @@ let parsedOilFntnIncr = parseFloat(oilFntnIncrease.innerHTML)
 let mpcText = document.getElementById("mpc-text")
 let mpsText = document.getElementById("mps-text")
 
+let bucketContainer = document.querySelector('.bucket-container')
+
 let mpc = 1;
 
 let mps = 0;
 
-function incrementMoney() {
+function incrementMoney(event) {
 
     money.innerHTML = Math.round(parsedMoney += mpc);
+
+    const x = event.offsetX
+    const y = event.offsetY
+
+    const div = document.createElement('div')
+    div.innerHTML = `+${Math.round(mpc)}`
+    div.style.cssText = `color: white; position: absolute; top: ${y}px; left: ${x}px; font-size: 15px; pointer-events: none`
+    bucketContainer.appendChild(div)
+
+    div.classList.add('fade-up')
+
+    timeout(div)
+}
+
+const timeout = (div) => {
+    setTimeout(()=> {
+        div.remove()
+    }, 800)
 }
 
 function buyBB() {
